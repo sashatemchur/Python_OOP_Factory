@@ -1,10 +1,12 @@
 class Factory:
+    # The main class in which the main arguments
     def __init__(self, name, color):
         self.name = name
         self.color = color
 
 
 class Bear_Toy(Factory):
+    # A secondary class that is inherited by the main class, a toy is created in the secondary class and it is said what it is called, what it is made of, etc. The toy is called Bear
     def __init__(self, name, color, type):
         Factory.__init__(self, name, color)
         self.type = type
@@ -26,6 +28,7 @@ class Bear_Toy(Factory):
 
 
 class Toy_Planet(Factory):
+    # A secondary class that is inherited by the main class, a toy is created in the secondary class and it is said what it is called, what it is made of, etc. The toy is called Planet
     def __init__(self, name, color, type):
         Factory.__init__(self, name, color)
         self.type = type
@@ -47,6 +50,7 @@ class Toy_Planet(Factory):
 
 
 class Toy_Rabbit(Factory):
+    # A secondary class that is inherited by the main class, a toy is created in the secondary class and it is said what it is called, what it is made of, etc. The toy is called Rabbit
     def __init__(self, name, color, type):
         Factory.__init__(self, name, color)
         self.type = type
@@ -68,6 +72,7 @@ class Toy_Rabbit(Factory):
 
 
 class Air_Layer_Toy(Factory):
+    # A secondary class that is inherited by the main class, a toy is created in the secondary class and it is said what it is called, what it is made of, etc. The toy is called Air Layer
     def __init__(self, name, color, type):
         Factory.__init__(self, name, color)
         self.type = type
@@ -89,6 +94,7 @@ class Air_Layer_Toy(Factory):
 
 
 class Man_Toy(Factory):
+    # A secondary class that is inherited by the main class, a toy is created in the secondary class and it is said what it is called, what it is made of, etc. The toy is called Man
     def __init__(self, name, color, type):
         Factory.__init__(self, name, color)
         self.type = type
@@ -109,12 +115,12 @@ class Man_Toy(Factory):
         return " That's all our toy is ready\n"
 
 
-Bear = Bear_Toy("Bear", "Blue-Yellow", "Silk")
-Planet = Toy_Planet("Planet", "The color of planet earth", "The cloth")
-Rabbit = Toy_Rabbit("Rabbit", "White-Black", "Silk")
-AirLayer = Air_Layer_Toy(
-    "Air Layer", "White-Blue-Green", "Silk-Plasma-The cloth")
-Man = Man_Toy("Man", "White", "Plasma")
+Bear = Bear_Toy("Bear", "Blue-Yellow", "Silk") # Indicates the given toy
+Planet = Toy_Planet("Planet", "The color of planet earth", "The cloth") # Indicates the given toy
+Rabbit = Toy_Rabbit("Rabbit", "White-Black", "Silk") # Indicates the given toy
+AirLayer = Air_Layer_Toy("Air Layer", "White-Blue-Green", "Silk-Plasma-The cloth") # Indicates the given toy
+Man = Man_Toy("Man", "White", "Plasma") # Indicates the given toy
+
 print(Bear.toy(), Bear.purchase_of_silk(),
       Bear.tailoring(), Bear.dyeing(), Bear.end())
 print(Planet.toy(), Planet.purchase_of_cloth(),
